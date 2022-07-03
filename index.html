@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | StarWars</title>
+  </head>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" style="width: 1000px; height: 1600px; background: #231F20"></canvas>
+    <script src="Build/StarWars_WebGL.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/StarWars_WebGL.data.gz",
+        frameworkUrl: "Build/StarWars_WebGL.framework.js.gz",
+        codeUrl: "Build/StarWars_WebGL.wasm.gz",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "DefaultCompany",
+        productName: "StarWars",
+        productVersion: "1.0",
+      });
+    </script>
+  </body>
+</html>
